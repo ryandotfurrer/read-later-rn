@@ -5,7 +5,7 @@
     "slug": "read-later-rn",
     "version": "0.1.0",
     "platforms": ["ios", "android", "web"],
-    // "githubUrl": "",
+    "githubUrl": "https://github.com/ryandotfurrer/read-later-rn",
     "orientation": "portrait",
     "userInterfaceStyle": "automatic",
     "backgroundColor": "#f4f4f5",
