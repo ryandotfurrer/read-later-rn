@@ -16,11 +16,20 @@ export const lightColors = {
 };
 
 export const darkColors = {
-  primary: "#0A84FF", // Example primary color (slightly different for dark mode)
-  secondary: "#5E5CE6", // Example secondary color
-  background: "#000000", // Black background
-  text: "#FFFFFF", // White text
-  // ... other dark mode colors
+  primary: "#fafafa",
+  primaryForeground: "#18181b",
+
+  secondary: "#27272a",
+  secondaryForeground: "#18181b",
+
+  background: "#18181b",
+  foreground: "#a1a1aa",
+
+  card: "#27272a",
+  cardForeground: "#a1a1aa",
+
+  text: "#a1a1aa",
+  border: "#3f3f46",
 };
 
 export const Colors = {
@@ -28,4 +37,4 @@ export const Colors = {
   dark: darkColors,
 };
 
-export type ThemeColors = typeof lightColors; // Or typeof darkColors, as the structure is the same
+export type ThemeColors = typeof lightColors;

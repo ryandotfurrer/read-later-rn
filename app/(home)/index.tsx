@@ -18,8 +18,8 @@ export default function Page() {
       </SignedIn>
       <SignedOut>
         <View style={styles.sectionContainer}>
-          <Text style={styles.headingOne}>read later</Text>
-          <Text style={styles.lastParagraph}>
+          <Text style={[styles.heading, styles.headingOne]}>read later</Text>
+          <Text style={[styles.Text, styles.lastParagraph]}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
             corrupti similique et, aut nisi id praesentium, impedit consequatur
             quod atque dicta doloribus blanditiis assumenda deserunt.
@@ -45,10 +45,22 @@ export default function Page() {
 const styles = StyleSheet.create({
   pageContainer: {
     paddingHorizontal: 16,
+    backgroundColor: useThemeColor(
+      { light: lightColors.background, dark: Colors.dark.background },
+      "background"
+    ),
+    height: "100%",
   },
 
   sectionContainer: {
     marginVertical: 64,
+  },
+
+  heading: {
+    color: useThemeColor(
+      { light: lightColors.primary, dark: Colors.dark.primary },
+      "primary"
+    ),
   },
 
   headingOne: {
@@ -61,6 +73,13 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
 
+  Text: {
+    color: useThemeColor(
+      { light: lightColors.foreground, dark: Colors.dark.foreground },
+      "foreground"
+    ),
+  },
+
   linkBtn: {
     borderWidth: 1,
     padding: 16,
@@ -69,13 +88,38 @@ const styles = StyleSheet.create({
   },
 
   linkBtnPrimary: {
-    borderColor: lightColors.primary,
-    backgroundColor: lightColors.primary,
-    color: lightColors.primaryForeground,
+    borderColor: useThemeColor(
+      { light: lightColors.border, dark: Colors.dark.border },
+      "border"
+    ),
+    backgroundColor: useThemeColor(
+      { light: lightColors.primary, dark: Colors.dark.primary },
+      "primary"
+    ),
+    color: useThemeColor(
+      {
+        light: lightColors.primaryForeground,
+        dark: Colors.dark.primaryForeground,
+      },
+      "primaryForeground"
+    ),
   },
 
   linkBtnOutline: {
-    backgroundColor: lightColors.card,
-    borderColor: lightColors.border,
+    backgroundColor: useThemeColor(
+      { light: lightColors.card, dark: Colors.dark.card },
+      "card"
+    ),
+    borderColor: useThemeColor(
+      { light: lightColors.border, dark: Colors.dark.border },
+      "border"
+    ),
+    color: useThemeColor(
+      {
+        light: lightColors.primary,
+        dark: Colors.dark.primary,
+      },
+      "primary"
+    ),
   },
 });
